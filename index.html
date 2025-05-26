@@ -83,6 +83,13 @@
       height: 100vh;
       overflow: hidden;
     }
+
+    /* NIEUW: pas hoogte aan bij breedbeeld (bijv. vanaf 1200px breedte) */
+    @media screen and (min-width: 1200px) {
+      header {
+        height: 80vh; /* of 60vh, afhankelijk van je voorkeur */
+      }
+    }
     .hero-container {
       position: relative;
       width: 100%;
@@ -180,7 +187,6 @@
   </style>
 </head>
 
-
 <body>
   <header>
     <div class="hero-container">
@@ -263,18 +269,28 @@
   </section>
   
 
-  <section id="contact" class="muted">
-    <div class="container">
+<section id="contact" class="muted">
+  <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 2rem;">
+    
+    <div style="flex: 1; min-width: 280px;">
       <h2>Contact</h2>
       <p>Neem contact op voor meer informatie of om een les te plannen.</p>
       <p>WhatsApp: <a href="https://wa.me/31612345678">+31 6 12345678</a></p>
       <p>Email: simon@motorbaas.nl</p>
-      <a class="button" href="https://wa.me/31612345678">Stuur nu een WhatsApp</a>
+      <a class="button" href="https://wa.me/31612345678">Stuur Simon een WhatsApp</a>
     </div>
-  </section>
+
+    <div style="flex-shrink: 0; display: flex; align-items: center; gap: 1rem;">
+      <img src="assets/avatar.png" alt="Simon Motorbaas" style="width: 250px; height: 250px; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
+
+      </div>
+    </div>
+
+  </div>
+</section>
 
   <footer>
-    &copy; 2025 Motorbaas.nl – Gewoon lekker motorrijden
+    &copy; 2025 Motorbaas.nl – Voor wie gewoon lekker wil motorrijden
   </footer>
 </body>
 </html>
