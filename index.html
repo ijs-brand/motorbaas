@@ -188,6 +188,26 @@
       padding: 1.2rem;
     }
 
+    /* ✅ CONTACT SECTIE MET FOTO */
+    #contact {
+      position: relative;
+      background: url('assets/contact-bg.jpg') center center/cover no-repeat;
+      color: #fff;
+    }
+
+    /* donkere overlay */
+    #contact::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.4);
+    }
+
+    #contact .container {
+      position: relative;
+      z-index: 2;
+    }
+
     footer {
       background: var(--muted);
       text-align: center;
@@ -215,8 +235,8 @@
       <img src="assets/landingpage2.jpg" class="hero-bg" alt="motor">
       <div class="hero-tekst">
         <!-- <h1>MOTORBAAS.NL</h1>
-        <p>voor wie écht<br>wil leren<br>motor–<br>rijden</p> -->
-        <!-- <a href="#lessen" class="button">Plan een les</a> -->
+        <p>voor wie écht<br>wil leren<br>motor–<br>rijden</p>
+        <a href="#lessen" class="button">Plan een les</a> -->
       </div>
     </div>
   </header>
@@ -262,18 +282,19 @@
     </div>
   </section>
 
-  <!-- ✅ CONTACT -->
-  <section id="contact" class="muted">
+  <!-- ✅ CONTACT MET ACHTERGROND -->
+  <section id="contact">
     <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 2rem;">
       <div style="flex: 1; min-width: 280px;">
         <h2>Contact</h2>
-        <p>Neem contact op voor meer informatie. Of plan direct je eerste les.</p>
-        <p>WhatsApp: <a href="https://wa.me/31648749406">+31 6 48749406</a></p>
+        <p>Neem contact op voor meer informatie.</p>
+  
+        <p>WhatsApp: <a href="https://wa.me/31648749406" style="color: #ffd900;">+31 6 48749406</a></p>
         <p>Email: demotorconsultant@gmail.com</p>
         <a class="button" href="https://wa.me/31648749406">Stuur Simon een bericht</a>
       </div>
       <div style="flex-shrink: 0; display: flex; align-items: center; gap: 1rem;">
-        <img src="assets/avatar.png" alt="Simon Motorbaas" style="width: 250px; height: 250px; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
+        <img src="assets/avatar.png" alt="Simon Motorbaas" style="width: 100px; height: 100px; border-radius: 50%; box-shadow: 0 0px 0px rgba(0,0,0,0.1);" />
       </div>
     </div>
   </section>
